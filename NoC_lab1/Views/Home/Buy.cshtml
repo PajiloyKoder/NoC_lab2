@@ -1,0 +1,27 @@
+﻿@{
+}
+<div>
+    <h3>Форма оформления покупки</h3>
+    <p>Для оформления заказа заполните поля:</p>
+    <form method="post">
+        <table>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="Data" value="@Timenow.GetNowTime()" /> </td>
+            </tr>
+            <tr>
+                <td>Способ доставки:</td>
+                <td><input type="text" name="Delivery" /></td>
+            </tr>
+            <tr>
+                <td>Ид Пользователя:</td>
+                <td><input type="text" name="IdUser" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="hidden" name="Price" value="124" /></td>
+            </tr>
+            <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+        </table>
+    </form>
+</div>

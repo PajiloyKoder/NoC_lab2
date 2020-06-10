@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Товары";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+<table>
+
+    <tr>
+
+        <td>id </td>
+
+        <td><p>Название      </p></td>
+        <td><p>Цена       </p> </td>
+        <td><p>Колличество          </p></td>
+    </tr>
+    @foreach (var Product in ViewBag.product)
+    {
+<tr>
+
+    <td>@Product.IdProduct</td>
+    <td>@Product.Name</td>
+    <td>@Product.Price</td>
+    <td>@Product.Quantity</td>
+    <td><a href="~/Home/Delete/@Product.IdProduct">Удалить</a></td>
+</tr>
+    }
+
+</table>

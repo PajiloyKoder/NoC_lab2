@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h2>Update</h2>
+<form method="post">
+    <table>
+        <tr>
+            <td>Название:</td>
+            <td><input type="text" name="Name" /></td>
+        </tr>
+        <tr>
+            <td>Цена:</td>
+            <td><input type="text" name="Price" /></td>
+        </tr>
+        <tr>
+            <td>Количество:</td>
+            <td><input type="text" name="Quantity" /></td>
+        </tr>
+        <tr>
+            <td>Информация о товаре:</td>
+            <td><input type="text" name="info" /></td>
+        </tr>
+        <tr>
+            <td>id производителя:</td>
+            <td><input type="text" name="idmanufacturer" /></td>
+        </tr>
+        <tr>
+            <td>id категории:</td>
+            <td><input type="text" name="idProduct_type" /></td>
+        </tr>
+        <tr><td><input type="submit" value="Обновить" /> </td><td></td></tr>
+        <tr><td><input type="button" value="Откат" onclick="location.href='@Url.Action("UpdatePost", "Home")'" /></td><td></td></tr>
+    </table>
+</form>
+
+

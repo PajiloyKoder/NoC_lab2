@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<h3>Корзинки</h3>
+<table>
+    <tr>
+        <td>idOrder</td>
+        <td>idProduct</td>
+        <td></td>
+    </tr>
+    @foreach (var Product in ViewBag.Orders)
+    {
+        <tr>
+            <td>@Product.IdOrder</td>
+            <td>@Product.IdProduct</td>
+            <td><a href="~/Home/Delete?a=@Product.IdOrder&b=@Product.IdProduct">Удалить</a></td>
+        </tr>
+    }
+</table>
